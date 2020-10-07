@@ -7,7 +7,7 @@ use Hackathon\Game\Result;
 /**
  * Class PipadaPlayers
  * @package Hackathon\PlayerIA
- * @author YOUR NAME HERE
+ * @author Celian NOEL
  */
 class PipadaPlayer extends Player
 {
@@ -39,10 +39,9 @@ class PipadaPlayer extends Player
         // How to get the number of round      ?    $this->result->getNbRound()
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
-        // -------------------------------------    -----------------------------------------------------
+	    // -------------------------------------    -----------------------------------------------------
 
-
-        return parent::rockChoice();
+        return parent::paperChoice();
 
     }
 };
