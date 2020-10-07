@@ -18,24 +18,14 @@ class PipadaPlayer extends Player
     public function getChoice()
     {
         $oponentlast = $this->result->getLastChoiceFor($this->opponentSide);
-        $lastscore = $this->result->getLastScoreFor($this->mySide);
-        if ($lastscore < 1)
-        {
-            if ( $oponentlast == "rock"){
-                return parent::paperChoice();
-            }
-            if ($oponentlast == "paper"){
-                return parent::scissorsChoice();
-            }
-            return parent::rockChoice();
-        }
+
         if ( $oponentlast == "rock"){
-            return parent::rockChoice();
-        }
-        if ($oponentlast == "paper"){
             return parent::paperChoice();
         }
-        return parent::scissorsChoice();
+        if ($oponentlast == "paper"){
+            return parent::scissorsChoice();
+        }
+        return parent::rockChoice();
         
     }
 };
